@@ -1413,7 +1413,7 @@ function getESCPOSData(r, settings) {
   lines.push(formatRow("Subtotal:", rp(r.subtotal)));
   if (r.discount > 0)
   lines.push(formatRow("Diskon:", "-" + rp(r.discount)));
- // lines.push(formatRow("Pajak", rp(receipt.tax)));//("Pajak", formatRp(receipt.tax)
+  lines.push(formatRow("Pajak", rp(r.tax)));//("Pajak", formatRp(receipt.tax)
   lines.push(formatRow("TOTAL:", rp(r.total)));
   lines.push(formatRow("Bayar:", rp(r.cashPaid)));
   if (r.change > 0)
@@ -1423,7 +1423,7 @@ function getESCPOSData(r, settings) {
   lines.push("\x1B\x61\x01"); // Center
   lines.push("Aplikasi Kasir:\n");
   lines.push("https://kasir-pro-v5.vercel.app/");
-  lines.push("\n"); // Feed paper (persis seperti modulprinter.db)
+  lines.push("\n\n\n"); // Feed paper (persis seperti modulprinter.db)
 
   return lines.join("");
 }
