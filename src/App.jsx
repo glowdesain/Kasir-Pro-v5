@@ -1413,7 +1413,7 @@ function getESCPOSData(r, settings) {
   lines.push(formatRow("Subtotal:", rp(r.subtotal)));
   if (r.discount > 0)
   lines.push(formatRow("Diskon:", "-" + rp(r.discount)));
-  lines.push(formatRow("Pajak", formatRp(receipt.tax)));//("Pajak", formatRp(receipt.tax)
+  lines.push(formatRow("Pajak", rp(receipt.tax)));//("Pajak", formatRp(receipt.tax)
   lines.push(formatRow("TOTAL:", rp(r.total)));
   lines.push(formatRow("Bayar:", rp(r.cashPaid)));
   if (r.change > 0)
