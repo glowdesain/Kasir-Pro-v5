@@ -1421,8 +1421,8 @@ function getESCPOSData(r, settings) {
   lines.push("--------------------------------\n");
 
   lines.push("\x1B\x61\x01"); // Center
-  lines.push("Terima kasih!\n");
-  lines.push("Aplikasi Kasir");
+  lines.push("Aplikasi Kasir:\n");
+  lines.push("https://kasir-pro-v5.vercel.app/");
   lines.push("\n"); // Feed paper (persis seperti modulprinter.db)
 
   return lines.join("");
