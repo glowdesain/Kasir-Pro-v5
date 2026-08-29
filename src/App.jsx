@@ -1422,7 +1422,7 @@ function getESCPOSData(r, settings) {
 
   lines.push("\x1B\x61\x01"); // Center
   lines.push("Terima kasih!\n");
-  lines.push("Aplikasi Kasir https://kasir-pro-v5.vercel.app/n");
+  lines.push("Aplikasi Kasir");
   lines.push("\n"); // Feed paper (persis seperti modulprinter.db)
 
   return lines.join("");
