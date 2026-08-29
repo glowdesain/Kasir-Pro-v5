@@ -1385,6 +1385,9 @@ function getESCPOSData(r, settings) {
   lines.push((settings.storeName || "Toko") + "\n");
   if (settings.address) lines.push(settings.address + "\n");
   lines.push("--------------------------------\n");
+  
+  lines.push("\x1B\x61\x00"); // Left align
+
   lines.push("No: " + r.id + "\n");
   lines.push(new Date(r.date).toLocaleString("id-ID", {
     day:"2-digit", month:"2-digit", year:"numeric",
@@ -1418,8 +1421,8 @@ function getESCPOSData(r, settings) {
 
   lines.push("\x1B\x61\x01"); // Center
   lines.push("Terima kasih!\n");
-  lines.push("Kasir-Pro\n");
-  lines.push("\n\n\n"); // Feed paper (persis seperti modulprinter.db)
+  //lines.push("Kasir-Pro\n");
+  lines.push("\n"); // Feed paper (persis seperti modulprinter.db)
 
   return lines.join("");
 }
